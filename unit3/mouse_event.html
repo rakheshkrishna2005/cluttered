@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mouse Events Handler</title>
+  <style>
+    #eventBox {
+      width: 300px;
+      height: 200px;
+      background-color: #f0f0f0;
+      border: 2px solid #ccc;
+      margin: 20px auto;
+      text-align: center;
+      line-height: 200px;
+      font-size: 20px;
+      color: #333;
+      transition: background-color 0.3s;
+    }
+  </style>
+</head>
+<body>
+  <div id="eventBox">Welcome!</div>
+
+  <script>
+    // Get the element to attach events
+    const eventBox = document.getElementById('eventBox');
+
+    // Handle mouseover event: when the mouse enters the element
+    eventBox.addEventListener('mouseover', () => {
+      eventBox.style.backgroundColor = '#e0f7fa';
+      eventBox.textContent = 'Mouse Over';
+      console.log('Mouse over event triggered');
+    });
+
+    // Handle mouseout event: when the mouse leaves the element
+    eventBox.addEventListener('mouseout', () => {
+      eventBox.style.backgroundColor = '#f0f0f0';
+      eventBox.textContent = 'Hover or Click Me!';
+      console.log('Mouse out event triggered');
+    });
+
+    // Handle click event: when the element is clicked
+    eventBox.addEventListener('click', () => {
+      eventBox.style.backgroundColor = '#ffecb3';
+      eventBox.textContent = 'Clicked!';
+      console.log('Click event triggered');
+    });
+
+    // Handle double click event: when the element is double-clicked
+    eventBox.addEventListener('dblclick', () => {
+      eventBox.style.backgroundColor = '#c8e6c9';
+      eventBox.textContent = 'Double Clicked!';
+      console.log('Double click event triggered');
+    });
+
+    // Handle mousedown event: when a mouse button is pressed down on the element
+    eventBox.addEventListener('mousedown', () => {
+      console.log('Mouse button pressed down');
+    });
+
+    // Handle mouseup event: when a mouse button is released over the element
+    eventBox.addEventListener('mouseup', () => {
+      console.log('Mouse button released');
+    });
+  </script>
+</body>
+</html>

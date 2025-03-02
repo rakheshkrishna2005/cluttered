@@ -1,0 +1,25 @@
+/* Styling for the element */
+#myElement {
+    font-size: 20px;
+    color: black;
+    background-color: lightgray;
+    padding: 10px;
+    border: 2px solid black;
+    width: fit-content;
+    margin: 20px 0;
+}
+
+/* Styling for the button */
+button {
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: darkblue;
+}

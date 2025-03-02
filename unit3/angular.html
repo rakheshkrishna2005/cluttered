@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="UTF-8">
+  <title>AngularJS Custom Application Example</title>
+  <!-- Include AngularJS from a CDN -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .card {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <!-- The main controller -->
+  <div ng-controller="MainController">
+    <h2>AngularJS Custom Application Example</h2>
+
+    <!-- Using the custom "reverse" filter -->
+    <h3>Custom Filter</h3>
+    <p><strong>Original:</strong> {{ message }}</p>
+    <p><strong>Reversed:</strong> {{ message | reverse }}</p>
+
+    <!-- Using the custom directive "customCard" -->
+    <h3>Custom Directive</h3>
+    <custom-card title="AngularJS Card" content="This is a custom directive card."></custom-card>
+
+    <!-- Example of a list using a built-in filter (uppercase) -->
+    <h3>Items List</h3>
+    <ul>
+      <li ng-repeat="item in items">{{ item.name | uppercase }}</li>
+    </ul>
+  </div>
+
+  <script>
+    // Define the AngularJS module
+    var app = angular.module('myApp', []);
+
+    // Custom Filter: Reverse the input string
+    app.filter('reverse', function() {
+      return function(input) {
+        if (!input) return '';
+        return input.split('').reverse().join('');
+      };
+    });
+
+    // Custom Directive: Create a card element displaying title and content
+    app.directive('customCard', function() {
+      return {
+        restrict: 'E', // Use as an element
+        scope: {
+          title: '@',
+          content: '@'
+        },
+        template: '<div class="card">' +
+                    '<h3>{{ title }}</h3>' +
+                    '<p>{{ content }}</p>' +
+                  '</div>'
+      };
+    });
+
+    // Controller: MainController to handle the application logic
+    app.controller('MainController', ['$scope', function($scope) {
+      $scope.message = "Hello, AngularJS!";
+      $scope.items = [
+        { name: 'Item 1' },
+        { name: 'Item 2' },
+        { name: 'Item 3' }
+      ];
+    }]);
+  </script>
+</body>
+</html>

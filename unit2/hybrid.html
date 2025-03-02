@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Different Types of CSS</title>
+  <!-- Link to External CSS file -->
+  <link rel="stylesheet" href="hybrid.css">
+  <!-- Embedded CSS -->
+  <style>
+    body {
+      background-color: #f9f9f9;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .embedded {
+      color: #2a9d8f;
+      text-align: center;
+      font-size: 24px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1 class="embedded">Different Types of CSS</h1>
+  
+  <!-- Inline CSS applied directly to the element -->
+  <p style="color: #e76f51; font-size: 18px;">
+    This paragraph uses inline CSS to set the text color and font size.
+  </p>
+  
+  <!-- This div uses external CSS defined in styles.css -->
+  <div class="external">
+    This div uses external CSS from the linked stylesheet.
+  </div>
+</body>
+</html>

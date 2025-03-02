@@ -1,0 +1,28 @@
+/* Styling text properties */
+.title {
+    font-size: 28px; /* Sets font size */
+    font-weight: bold; /* Makes text bold */
+    text-align: center; /* Centers the text */
+    text-transform: uppercase; /* Converts text to uppercase */
+    color: #2c3e50; /* Dark blue text color */
+    letter-spacing: 2px; /* Increases space between letters */
+}
+
+/* Paragraph text properties */
+.description {
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6; /* Increases line spacing */
+    text-align: justify; /* Justifies text */
+    color: #555; /* Sets text color */
+}
+
+/* Applying margin properties */
+.container {
+    width: 60%;
+    margin: 50px auto; /* Centers the container horizontally */
+    padding: 20px;
+    border: 2px solid #3498db; /* Adds a border for visibility */
+    border-radius: 10px;
+    background-color: #f9f9f9; /* Light gray background */
+}

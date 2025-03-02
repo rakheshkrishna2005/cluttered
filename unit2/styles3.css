@@ -1,0 +1,24 @@
+/* (i) Paint the background gray */
+body {
+    background-color: gray;
+}
+
+/* (ii) Set the artist h1 to be only uppercase */
+h1.artist {
+    text-transform: uppercase;
+}
+
+/* (iii) Set the title h2 to be uppercase-first letter */
+h2.title {
+    text-transform: capitalize;
+}
+
+/* (iv) Set a line spacing between the lines */
+p {
+    line-height: 1.6;
+}
+
+/* (v) Set letter spacing between the letters in each span of type instruction */
+span.instruction {
+    letter-spacing: 2px;
+}

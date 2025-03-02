@@ -1,0 +1,24 @@
+/* Applying border properties */
+.box {
+    border: 5px solid #3498db; /* Blue solid border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+/* Applying background properties */
+.box {
+    background-color: #f0f8ff; /* Light blue background */
+    background-image: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient background */
+    color: white;
+}
+
+/* Adding background to the whole page */
+body {
+    background-image: url('background.jpg'); /* Background image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
